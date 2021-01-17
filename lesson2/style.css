@@ -1,49 +1,76 @@
 body {
     font-family: 'Raleway', sans-serif;
-    margin: auto;
-    max-width: 960px;
-    
+  
 }
 header {
-    background-color: rgb(19, 98, 134);
+    background-color: rgb(11, 85, 119);
     color: white;
-    max-width: 960px;
-    
-    
-}
-main {
-    display: grid;
-    margin: auto ;
-    max-width: 960px;
-    
-}
-main section h2 {
-    background-color: rgb(19, 98, 134);
-    margin-top: 0px;
-    color: white;
-    padding: 5px;
-
-
-}
-
-main section {
-    max-width: 315px;
-    border-style: solid;
-    border-color: rgb(19, 98, 134);
-    background-color: #CCCCCC;
-    border-radius:15px;
+    padding: 10px;
     text-align: center;
-    
-}
-main section img {
-    width: 315px;
+    max-width: 960px;
+    margin: auto;
+    margin-bottom: 1em;
 }
 
+main {
+    max-width: 960px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: auto;
+    text-align: center;
+
+}
+img {
+    max-width: 300px;
+}
+
+section {
+    max-width: 300px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgb(11, 85, 119);
+    background-color: #cccccc;
+    border-radius: 16px;
+}   
+
+section h2 {
+    background-color: rgb(11, 85, 119);
+    color: white;
+    margin-top: 0px; 
+    padding: 5px;
+    border-radius: 15px 15px 0px 0px;
+
+}
+
+.apple {
+    grid-column: 1 / 2;
+    
+
+}
+.ksl {
+    grid-column: 2 / 3;
+    
+}
+.pandora {
+    grid-column: 3 / 4;
+   
+}
 @media screen and (min-width: 480) {
     main {
-        display: grid;
-  
-
-      
+        grid-template-columns: auto;
+        
+    
     }
   }
+
+  @media screen and (min-width: 720) {
+    main {
+        grid-template-columns: auto auto;       
+    
+    }
+    .pandora {
+        grid-column: 1 / -1;
+    }
+  }
+
+
